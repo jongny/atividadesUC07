@@ -1,19 +1,19 @@
-@model Livro
-<div class="row justify-content-md-center">
-    <form asp-action="Cadastro" method="POST" class="col-md-4">
-        <input type="hidden" asp-for="Id" />
-        <div class="form-group">
-            <label asp-for="Titulo">Titulo</label>
-            <input asp-for="Titulo" class="form-control"/>
+@{
+    ViewData["Title"] = "Login";
+}
+<!--<div class="container">-->
+    <div class="row justify-content-md-center">
+        <div class="jumbotron col-6">
+            <h1>Bem vindo ao sistema Biblioteca</h1>
+            <form asp-action="Login" method="POST">
+                <div class="form-group">
+                    <input type="text" placeholder="Login" class="form-control" name="login" />
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="Senha" class="form-control" name="senha"/>
+                </div>
+                <input type="submit" class="btn btn-primary btn-lg" value="Entrar" />
+            </form>
+            <p class="text-danger">@ViewData["Erro"]</p>
         </div>
-        <div class="form-group">
-            <label asp-for="Autor">Ator</label>
-            <input asp-for="Autor" class="form-control"/>
-        </div>
-        <div>
-            <label asp-for="Ano">Ano</label>
-            <input asp-for="Ano" />
-        </div>
-        <input type="submit" value="Salvar" class="btn btn-primary"/>
-    </form>
-</div>
+    </div>

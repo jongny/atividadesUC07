@@ -51,3 +51,9 @@ C:\Users\Chico e Nenzita\Downloads\Senac\projeto integrador\Projeto Integrador\B
 C:\Users\Chico e Nenzita\Downloads\Senac\projeto integrador\Projeto Integrador\Biblioteca\obj\Debug\netcoreapp3.1\Biblioteca.dll
 C:\Users\Chico e Nenzita\Downloads\Senac\projeto integrador\Projeto Integrador\Biblioteca\obj\Debug\netcoreapp3.1\Biblioteca.pdb
 C:\Users\Chico e Nenzita\Downloads\Senac\projeto integrador\Projeto Integrador\Biblioteca\obj\Debug\netcoreapp3.1\Biblioteca.genruntimeconfig.cache
+C:\Users\Chico e Nenzita\Downloads\Senac\projeto integrador\Projeto Integrador\Biblioteca\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\CadastroRealizado.cshtml.g.cs
+C:\Users\Chico e Nenzita\Downloads\Senac\projeto integrador\Projeto Integrador\Biblioteca\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\EditarUsuario.cshtml.g.cs
+C:\Users\Chico e Nenzita\Downloads\Senac\projeto integrador\Projeto Integrador\Biblioteca\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\ExcluirUsuario.cshtml.g.cs
+C:\Users\Chico e Nenzita\Downloads\Senac\projeto integrador\Projeto Integrador\Biblioteca\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\ListaDeUsuarios.cshtml.g.cs
+C:\Users\Chico e Nenzita\Downloads\Senac\projeto integrador\Projeto Integrador\Biblioteca\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\NeedAdmin.cshtml.g.cs
+C:\Users\Chico e Nenzita\Downloads\Senac\projeto integrador\Projeto Integrador\Biblioteca\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\RegistrarUsuario.cshtml.g.cs

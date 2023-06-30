@@ -69,12 +69,6 @@ namespace Biblioteca.Controllers
 
             return View(cadModel);
         }
-
-        // Criado uma exclusão para casa haja alguma devolução dos livros 
-
-        /*
-               (Subsituir "Cadastro" por "edição" no form do arquivo /Views/Emprestimos/Edicao.cshtml)
-                (Retirar condição if/eslse do método httpPost de "Cadastro" e deixar apneas a função de inserir )
                 [HttpPost]
                 public IActionResult Edicao(CadEmprestimoViewModel viewModel)
                 {
@@ -93,6 +87,6 @@ namespace Biblioteca.Controllers
                     return RedirectToAction("Listagem");
 
                 }
-        */
+
     }
 }
