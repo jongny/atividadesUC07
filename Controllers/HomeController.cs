@@ -27,19 +27,41 @@ namespace Biblioteca.Controllers
 
         public IActionResult Login()
         {
+            
+            //Teste Criptografia
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine(Criptografia.GerarMD5("123"));
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+
+
+
             return View();
         }
 
         [HttpPost]
         public IActionResult Login(string login, string senha)
         {
-             if(Autenticacao.verificaLoginSenha(login,senha,this)){
+            if(Autenticacao.verificaLoginSenha(login, senha, this)) 
+            {
                 return RedirectToAction("Index");
             }
-            else{
-                ViewData["Erro"] = "Senha Inválida";
+            else
+            {
+                ViewData["Error"] = "Senha inválida";
+                return View();
             }
-            return View();
         }
 
         public IActionResult Privacy()

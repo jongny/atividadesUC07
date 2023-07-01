@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
-using System.Collections;
 
 namespace Biblioteca.Models
 {
@@ -31,24 +30,28 @@ namespace Biblioteca.Models
             }
         }
 
-        public ICollection<Emprestimo> ListarTodos(FiltrosEmprestimos filtro = null)
+        public ICollection<Emprestimo> ListarTodos(FiltrosEmprestimos filtro)
         {
+            /* using(BibliotecaContext bc = new BibliotecaContext())
+            {
+                return bc.Emprestimos.Include(e => e.Livro).ToList();
+            } */
+
             using(BibliotecaContext bc = new BibliotecaContext())
             {
-                
-                    IQueryable<Emprestimo> query;
+                IQueryable<Emprestimo> query;
                 
                 if(filtro != null)
                 {
-                    
+                    //definindo dinamicamente a filtragem
                     switch(filtro.TipoFiltro)
                     {
-                        case "NomeUsuario":
+                        case "Usuario":
                             query = bc.Emprestimos.Where(e => e.NomeUsuario.Contains(filtro.Filtro));
                         break;
 
-                        case "Livro":
-                         query = bc.Emprestimos.Where(e => e.Livro.Titulo.Contains(filtro.Filtro));
+                        case "Titulo":
+                            query = bc.Emprestimos.Where(e => e.Livro.Titulo.Contains(filtro.Filtro));
                         break;
 
                         default:
@@ -59,13 +62,11 @@ namespace Biblioteca.Models
                 else
                 {
                     // caso filtro não tenha sido informado
-                   query = bc.Emprestimos;
+                    query = bc.Emprestimos;
                 }
                 
                 //ordenação padrão
-                
-                 return query.Include(e => e.Livro).OrderByDescending(e=> e.DataDevolucao).ToList();
-                
+                return query.Include(e => e.Livro).OrderBy(e => e.DataDevolucao).ToList();
             }
         }
 
@@ -75,16 +76,6 @@ namespace Biblioteca.Models
             {
                 return bc.Emprestimos.Find(id);
             }
-        }
-
-        public void excluirEmprestimo (int id){
-
-         using(BibliotecaContext bc = new BibliotecaContext()){
-          
-          bc.Emprestimos.Remove(bc.Emprestimos.Find(id));
-          bc.SaveChanges();
-
-         }
         }
     }
 }
